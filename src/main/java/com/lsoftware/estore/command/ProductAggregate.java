@@ -15,7 +15,7 @@ import com.lsoftware.estore.shared.core.commands.ReserveProductCommand;
 import com.lsoftware.estore.shared.core.events.ProductReservationCancelledEvent;
 import com.lsoftware.estore.shared.core.events.ProductReservedEvent;
 
-@Aggregate
+@Aggregate(snapshotTriggerDefinition = "productSnapshotTriggerDefinition")
 public class ProductAggregate {
 	
 	@AggregateIdentifier
